@@ -31,4 +31,4 @@ def query(short):
     else:
         return webob.Response("not found, sorry", status=404)
 
-# handler = bobo.Application(bobo_resources=__name__)
+application = bobo.Application(bobo_resources=__name__)
