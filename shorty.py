@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+# shorty.py - simple URL shortener WSGI app with Beaker cache backend
+# (c) Copyright 2010 Aleksandar Radulovic. All Rights Reserved.
+
 import bobo
 import webob
 from random import  sample
