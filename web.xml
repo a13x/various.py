@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <servlet>
+        <servlet-name>modjy</servlet-name>
+        <servlet-class>com.xhaus.modjy.ModjyJServlet</servlet-class>
+        <init-param>
+            <param-name>python.home</param-name>
+            <param-value>/Applications/java/jython</param-value>
+        </init-param>
+        <init-param>
+            <param-name>python.cachedir.skip</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>reload_on_mod</param-name>
+            <param-value>1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>app_directory</param-name>
+            <param-value>$/</param-value>
+        </init-param>
+        <init-param>
+            <param-name>app_filename</param-name>
+            <param-value>shorty.py</param-value>
+        </init-param>
+        <init-param>
+            <param-name>log_level</param-name>
+            <param-value>debug</param-value>
+        </init-param>
+
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>modjy</servlet-name>
+        <url-pattern>/s/*</url-pattern>
+    </servlet-mapping>
+</web-app>
